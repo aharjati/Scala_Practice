@@ -20,6 +20,20 @@ object CollectionTest {
     println("result with param 2 :"+ curry(2))
 
     val d = curry
-    println("result after defining val with curry(without anyx   param) :"+ d(2))
+    println("result after defining val with curry(without any param) :"+ d(2))
+
+
+    println("Multiple Generators")
+    val a1 = Seq(1,2,3)
+    val a2 = Seq('a','b','c')
+    val a3 = Seq(4,5,6)
+
+    val res = for {
+      b1 <- a1
+      b2 <- a2
+      b3 <- a3
+    } yield (b1,b2,b3)
+
+    println("result : "+res.mkString(","))
   }
 }
