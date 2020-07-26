@@ -15,7 +15,7 @@ object CollectionTest {
           ch2 =>
             tmp = tmp + ch2
             //println("combo:"+tmp)
-            if ( tmp == tmp.reverse && tmp.length > result.length)
+            if ( tmp.length > result.length && tmp == tmp.reverse )
               result = tmp
         }
     }
